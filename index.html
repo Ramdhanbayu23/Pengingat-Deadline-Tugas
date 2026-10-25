@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090815">
+  <title>Teman Deadline — Pengingat Tugas Kuliah</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Teman Deadline, beranda">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>teman<span class="brand-accent">deadline</span></span>
+      </a>
+      <span class="topbar-note"><span class="online-dot"></span> Ruang kuliahmu, lebih teratur</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="judul-halaman">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> PENGINGAT TUGAS KULIAH</p>
+          <h1 id="judul-halaman">Deadline aman,<br><span>kuliah nyaman.</span></h1>
+          <p class="hero-description">Catat tugasmu sekarang. Satu langkah kecil hari ini bikin besok lebih tenang.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-sun"></div>
+          <div class="art-paper">
+            <span class="paper-check">✓</span>
+            <span class="paper-line paper-line-long"></span>
+            <span class="paper-line"></span>
+            <span class="paper-line paper-line-short"></span>
+            <span class="paper-date">HARI INI</span>
+          </div>
+          <span class="art-spark spark-one">✳</span>
+          <span class="art-spark spark-two">✦</span>
+          <span class="art-orbit"></span>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Ringkasan tugas">
+        <article class="stat-card">
+          <span class="stat-icon stat-icon-purple" aria-hidden="true">▤</span>
+          <div><p class="stat-label">Total tugas</p><p class="stat-number" id="jumlah-total">0</p></div>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon stat-icon-orange" aria-hidden="true">◷</span>
+          <div><p class="stat-label">Belum selesai</p><p class="stat-number" id="jumlah-belum-selesai">0</p></div>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon stat-icon-green" aria-hidden="true">✓</span>
+          <div><p class="stat-label">Deadline dekat</p><p class="stat-number" id="jumlah-dekat">0</p></div>
+        </article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel form-panel" aria-labelledby="judul-formulir">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">MULAI DARI SINI</p>
+              <h2 id="judul-formulir">Tambah tugas</h2>
+            </div>
+            <span class="heading-icon" aria-hidden="true">＋</span>
+          </div>
+          <p class="form-intro">Tulis tugas yang perlu kamu selesaikan.</p>
+
+          <form id="formulir-tugas">
+            <label for="judul-tugas">Nama tugas</label>
+            <input id="judul-tugas" name="judul" type="text" maxlength="80" placeholder="Contoh: Makalah komunikasi" required>
+
+            <label for="matkul-tugas">Mata kuliah <span class="optional">(opsional)</span></label>
+            <input id="matkul-tugas" name="matkul" type="text" maxlength="50" placeholder="Contoh: Komunikasi Bisnis">
+
+            <label for="tanggal-tenggat">Tanggal deadline</label>
+            <input id="tanggal-tenggat" name="tenggat" type="date" required>
+
+            <button class="button button-primary" type="submit">
+              <span aria-hidden="true">＋</span> Simpan pengingat
+            </button>
+          </form>
+          <p class="form-footnote"><span aria-hidden="true">♡</span> Pelan-pelan, yang penting mulai.</p>
+        </section>
+
+        <section class="panel task-panel" aria-labelledby="judul-daftar-tugas">
+          <div class="section-heading task-heading">
+            <div>
+              <p class="section-kicker">DAFTAR KAMU</p>
+              <h2 id="judul-daftar-tugas">Tugas kuliah</h2>
+            </div>
+            <span class="task-total" id="jumlah-di-daftar">0 tugas</span>
+          </div>
+
+          <p class="notice" id="pesan" role="status" aria-live="polite"></p>
+          <div class="task-list" id="daftar-tugas"></div>
+          <div class="empty-state" id="tampilan-kosong">
+            <span class="empty-illustration" aria-hidden="true">✎</span>
+            <h3>Belum ada tugas, nih</h3>
+            <p>Tambahkan tugas pertamamu lewat formulir di samping. Kamu pasti bisa!</p>
+          </div>
+          <p class="list-footnote"><span aria-hidden="true">✦</span> Tugas yang selesai bisa kamu centang.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span>Dibuat untuk menemani hari-hari kuliahmu <span class="footer-heart">♥</span></span>
+      <span>HTML · CSS · JavaScript</span>
+    </footer>
+  </div>
+</body>
+</html>
